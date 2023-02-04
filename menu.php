@@ -1,0 +1,61 @@
+<?php
+$get_name_1=$_REQUEST['name_1'];
+$get_name_2=$_REQUEST['name_2'];
+$get_name_3=$_REQUEST['name_3'];
+$get_name_4=$_REQUEST['name_4'];
+$get_name_5=$_REQUEST['name_5'];
+$get_name_6=$_REQUEST['name_6'];
+$get_name_7=$_REQUEST['name_7'];
+$get_name_8=$_REQUEST['name_8'];
+$get_name_9=$_REQUEST['name_9'];
+$get_name_10=$_REQUEST['name_10'];
+$get_name_11=$_REQUEST['name_11'];
+$get_name_12=$_REQUEST['name_12'];
+$get_name_13=$_REQUEST['name_13'];
+$get_name_14=$_REQUEST['name_14'];
+$get_name_15=$_REQUEST['name_15'];
+$get_name_16=$_REQUEST['name_16'];
+$get_name_17=$_REQUEST['name_17'];
+$get_name_18=$_REQUEST['name_18'];
+$get_name_19=$_REQUEST['name_19'];
+$get_name_20=$_REQUEST['name_20'];
+$create_array=array("week"=>array(
+    "Երկուշաբթի"=>array(
+    "time_1"=>$get_name_1,
+    "time_2"=>$get_name_2,
+    "time_3"=>$get_name_3,
+    "time_4"=>$get_name_4
+    ),
+    "Երեքշաբթի"=>array(
+    "time_1"=>$get_name_5,
+    "time_2"=>$get_name_6,
+    "time_3"=>$get_name_7,
+    "time_4"=>$get_name_8
+    ),
+    "Չորեքշաբթի"=>array(
+    "time_1"=>$get_name_9,
+    "time_2"=>$get_name_10,
+    "time_3"=>$get_name_11,
+    "time_4"=>$get_name_12
+    ),
+    "Հինգշաբթի"=>array(
+    "time_1"=>$get_name_13,
+    "time_2"=>$get_name_14,
+    "time_3"=>$get_name_15,
+    "time_4"=>$get_name_16
+    ),
+    "Ուրբաթ"=>array(
+    "time_1"=>$get_name_17,
+    "time_2"=>$get_name_18,
+    "time_3"=>$get_name_19,
+    "time_4"=>$get_name_20
+    ),
+    "Շաբաթ"=>array(
+    "time_1"=>""
+    )
+)
+);
+$put_contents=json_encode($create_array,JSON_UNESCAPED_UNICODE);
+file_put_contents("menu.json",$put_contents);
+header("Location:".$_SERVER['HTTP_REFERER']);
+?>
